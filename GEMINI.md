@@ -5,6 +5,7 @@ This is a web application written using the Phoenix web framework.
 - Use `mix precommit` alias when you are done with all changes and fix any pending issues
 - Use the already included and available `:req` (`Req`) library for HTTP requests, **avoid** `:httpoison`, `:tesla`, and `:httpc`. Req is included by default and is the preferred HTTP client for Phoenix apps
 - Prefer to run `mix` generators (`mix phx.gen.live`, `mix phx.gen.html`, etc) instead of manually creating files if a generator exists
+- The `mix precommit` command will run `mix compile`, `mix deps.unlock --unused`, `mix format`, `mix credo --strict`, `mix dialyzer`, and `mix test` all in one go and should be run after finishing any task
 
 ### Goals
 
@@ -15,6 +16,7 @@ This is a real time chat app with servers and channels.
 - Messages are real time
 - Messages can be markdown formatted
 - Messages can have attachments (images, videos, gifs, etc) shown inline
+- Users can send direct messages to other users
 
 ### Phoenix v1.8 guidelines
 
