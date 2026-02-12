@@ -1,0 +1,604 @@
+
+01:55:05.416 [info] Loading 47 CA(s) from :otp store
+
+01:55:05.918 id=1 [debug] handled request client -> server initialize in 101ms
+
+01:55:05.923 [debug] sent notification server -> client window/logMessage
+
+01:55:05.924 [debug] handled notification client -> server textDocument/didOpen in 4ms
+
+01:55:05.926 [debug] NextLS v0.23.4 has initialized!
+
+01:55:05.926 [debug] sent notification server -> client window/logMessage
+
+01:55:05.926 [debug] Log file located at c:/Users/ryans/Documents/Code/chaoschat/.elixir-tools/next-ls.log
+
+01:55:05.926 [debug] sent notification server -> client window/logMessage
+
+01:55:05.926 id=70 [debug] sent request server -> client client/registerCapability
+
+01:55:05.926 [info] [extension] Credo initializing with options %NextLS.InitOpts.Extensions.Credo{enable: true, cli_options: []}
+
+01:55:08.054 [debug] sent notification server -> client window/logMessage
+
+01:55:08.054 [warning] Failed to unzip and install the bundled Elixir archive.
+
+** (MatchError) no match of right hand side value: {"** (Regex.CompileError) invalid_option at position E\n    (elixir 1.17.3) lib/regex.ex:257: Regex.compile!/2\n    (elixir 1.17.3) expanding macro: Kernel.sigil_r/2\n    c:/Users/ryans/Documents/Code/chaoschat/config/config.exs:78: (file)\n", 1}
+    (next_ls 0.23.4) lib/next_ls/runtime/bundled_elixir.ex:55: NextLS.Runtime.BundledElixir.install/2
+    (next_ls 0.23.4) lib/next_ls.ex:882: NextLS.handle_notification/2
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:528: anonymous fn/2 in GenLSP.loop/3
+    (telemetry 1.3.0) /Users/runner/work/next-ls/next-ls/deps/telemetry/src/telemetry.erl:324: :telemetry.span/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:524: anonymous fn/4 in GenLSP.loop/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:601: anonymous fn/4 in GenLSP.attempt/4
+    (elixir 1.17.3) lib/task/supervised.ex:101: Task.Supervised.invoke_mfa/2
+
+
+
+01:55:08.054 [debug] sent notification server -> client window/logMessage
+
+01:55:08.054 [debug] Booting runtimes...
+
+01:55:08.062 id=134 [debug] sent request server -> client window/workDoneProgress/create
+
+01:55:08.069 [debug] sent notification server -> client $/progress
+
+01:55:08.072 [error] ** (MatchError) no match of right hand side value: {:error, {%File.Error{reason: :enoent, path: "/C:/Users/ryans/Documents/Code/chaoschat/.elixir-tools", action: "make directory (with -p)"}, [{File, :mkdir_p!, 1, [file: ~c"lib/file.ex", line: 346]}, {NextLS.Runtime.Supervisor, :init, 1, [file: ~c"lib/next_ls/runtime/supervisor.ex", line: 18]}, {:supervisor, :init, 1, [file: ~c"supervisor.erl", line: 869]}, {:gen_server, :init_it, 2, [file: ~c"gen_server.erl", line: 2229]}, {:gen_server, :init_it, 6, [file: ~c"gen_server.erl", line: 2184]}, {:proc_lib, :init_p_do_apply, 3, [file: ~c"proc_lib.erl", line: 329]}]}}
+    (next_ls 0.23.4) lib/next_ls.ex:907: anonymous fn/5 in NextLS.handle_notification/2
+    (elixir 1.17.3) lib/enum.ex:2531: Enum."-reduce/3-lists^foldl/2-0-"/3
+    (next_ls 0.23.4) lib/next_ls.ex:902: NextLS.handle_notification/2
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:528: anonymous fn/2 in GenLSP.loop/3
+    (telemetry 1.3.0) /Users/runner/work/next-ls/next-ls/deps/telemetry/src/telemetry.erl:324: :telemetry.span/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:524: anonymous fn/4 in GenLSP.loop/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:601: anonymous fn/4 in GenLSP.attempt/4
+    (elixir 1.17.3) lib/task/supervised.ex:101: Task.Supervised.invoke_mfa/2
+
+
+01:55:08.072 [debug] sent notification server -> client window/logMessage
+
+01:55:08.072 [warning] client -> server notification crashed
+
+01:55:08.230 [debug] handled notification client -> server workspace/didChangeWatchedFiles in 6ms
+
+01:55:26.921 [debug] handled notification client -> server textDocument/didOpen in 205µs
+
+01:55:27.026 [debug] handled notification client -> server workspace/didChangeWatchedFiles in 307µs
+
+01:56:01.703 id=2 [debug] handled request client -> server shutdown in 1ms
+
+01:56:01.704 id=3 [debug] handled request client -> server shutdown in 102µs
+
+01:56:07.318 [info] Loading 47 CA(s) from :otp store
+
+01:56:07.612 id=1 [debug] handled request client -> server initialize in 101ms
+
+01:56:07.640 [debug] sent notification server -> client window/logMessage
+
+01:56:07.641 [debug] handled notification client -> server textDocument/didOpen in 3ms
+
+01:56:07.643 [debug] NextLS v0.23.4 has initialized!
+
+01:56:07.643 [debug] sent notification server -> client window/logMessage
+
+01:56:07.643 [debug] Log file located at c:/Users/ryans/Documents/Code/chaoschat/.elixir-tools/next-ls.log
+
+01:56:07.643 [debug] sent notification server -> client window/logMessage
+
+01:56:07.643 [info] [extension] Credo initializing with options %NextLS.InitOpts.Extensions.Credo{enable: true, cli_options: []}
+
+01:56:07.643 id=3524 [debug] sent request server -> client client/registerCapability
+
+01:56:07.775 [debug] handled notification client -> server textDocument/didOpen in 410µs
+
+01:56:08.365 [debug] sent notification server -> client window/logMessage
+
+01:56:08.365 [warning] Failed to unzip and install the bundled Elixir archive.
+
+** (MatchError) no match of right hand side value: {"** (Regex.CompileError) invalid_option at position E\n    (elixir 1.17.3) lib/regex.ex:257: Regex.compile!/2\n    (elixir 1.17.3) expanding macro: Kernel.sigil_r/2\n    c:/Users/ryans/Documents/Code/chaoschat/config/config.exs:78: (file)\n", 1}
+    (next_ls 0.23.4) lib/next_ls/runtime/bundled_elixir.ex:55: NextLS.Runtime.BundledElixir.install/2
+    (next_ls 0.23.4) lib/next_ls.ex:882: NextLS.handle_notification/2
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:528: anonymous fn/2 in GenLSP.loop/3
+    (telemetry 1.3.0) /Users/runner/work/next-ls/next-ls/deps/telemetry/src/telemetry.erl:324: :telemetry.span/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:524: anonymous fn/4 in GenLSP.loop/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:601: anonymous fn/4 in GenLSP.attempt/4
+    (elixir 1.17.3) lib/task/supervised.ex:101: Task.Supervised.invoke_mfa/2
+
+
+
+01:56:08.365 [debug] sent notification server -> client window/logMessage
+
+01:56:08.365 [debug] Booting runtimes...
+
+01:56:08.371 id=3588 [debug] sent request server -> client window/workDoneProgress/create
+
+01:56:08.379 [error] ** (MatchError) no match of right hand side value: {:error, {%File.Error{reason: :enoent, path: "/C:/Users/ryans/Documents/Code/chaoschat/.elixir-tools", action: "make directory (with -p)"}, [{File, :mkdir_p!, 1, [file: ~c"lib/file.ex", line: 346]}, {NextLS.Runtime.Supervisor, :init, 1, [file: ~c"lib/next_ls/runtime/supervisor.ex", line: 18]}, {:supervisor, :init, 1, [file: ~c"supervisor.erl", line: 869]}, {:gen_server, :init_it, 2, [file: ~c"gen_server.erl", line: 2229]}, {:gen_server, :init_it, 6, [file: ~c"gen_server.erl", line: 2184]}, {:proc_lib, :init_p_do_apply, 3, [file: ~c"proc_lib.erl", line: 329]}]}}
+    (next_ls 0.23.4) lib/next_ls.ex:907: anonymous fn/5 in NextLS.handle_notification/2
+    (elixir 1.17.3) lib/enum.ex:2531: Enum."-reduce/3-lists^foldl/2-0-"/3
+    (next_ls 0.23.4) lib/next_ls.ex:902: NextLS.handle_notification/2
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:528: anonymous fn/2 in GenLSP.loop/3
+    (telemetry 1.3.0) /Users/runner/work/next-ls/next-ls/deps/telemetry/src/telemetry.erl:324: :telemetry.span/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:524: anonymous fn/4 in GenLSP.loop/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:601: anonymous fn/4 in GenLSP.attempt/4
+    (elixir 1.17.3) lib/task/supervised.ex:101: Task.Supervised.invoke_mfa/2
+
+
+01:56:08.379 [debug] sent notification server -> client window/logMessage
+
+01:56:08.379 [warning] client -> server notification crashed
+
+01:56:08.413 [debug] sent notification server -> client $/progress
+
+01:56:33.109 [debug] handled notification client -> server textDocument/didOpen in 103µs
+
+01:56:33.214 [debug] handled notification client -> server workspace/didChangeWatchedFiles in 3ms
+
+01:57:40.555 [debug] handled notification client -> server textDocument/didOpen in 102µs
+
+01:57:40.656 [debug] handled notification client -> server workspace/didChangeWatchedFiles in 307µs
+
+01:57:49.289 [debug] handled notification client -> server textDocument/didOpen in 307µs
+
+01:57:49.389 [debug] handled notification client -> server workspace/didChangeWatchedFiles in 205µs
+
+01:57:50.120 [debug] handled notification client -> server textDocument/didOpen in 103µs
+
+01:57:50.233 [debug] handled notification client -> server workspace/didChangeWatchedFiles in 205µs
+
+01:57:59.297 [debug] handled notification client -> server textDocument/didChange in 5ms
+
+01:57:59.489 [debug] handled notification client -> server textDocument/didChange in 205µs
+
+01:58:00.610 [debug] handled notification client -> server textDocument/didChange in 410µs
+
+01:58:00.779 [debug] handled notification client -> server textDocument/didChange in 307µs
+
+01:58:00.942 [debug] handled notification client -> server textDocument/didChange in 307µs
+
+01:58:01.095 [debug] handled notification client -> server textDocument/didChange in 205µs
+
+01:58:01.657 id=2 [debug] handled request client -> server textDocument/completion in 1043ms
+
+01:58:02.812 [debug] handled notification client -> server textDocument/didChange in 922µs
+
+01:58:03.039 [debug] handled notification client -> server textDocument/didChange in 308µs
+
+01:58:03.198 [debug] handled notification client -> server textDocument/didChange in 409µs
+
+01:58:03.351 [debug] handled notification client -> server textDocument/didChange in 205µs
+
+01:58:03.820 id=3 [debug] handled request client -> server textDocument/completion in 1004ms
+
+01:58:03.845 [debug] handled notification client -> server textDocument/didChange in 512µs
+
+01:58:04.021 [debug] handled notification client -> server textDocument/didChange in 615µs
+
+01:58:04.186 [debug] handled notification client -> server textDocument/didChange in 308µs
+
+01:58:04.401 [debug] handled notification client -> server textDocument/didChange in 307µs
+
+01:58:05.271 [debug] handled notification client -> server textDocument/didChange in 307µs
+
+01:58:05.431 [debug] handled notification client -> server textDocument/didChange in 410µs
+
+01:58:06.286 id=4 [debug] handled request client -> server textDocument/completion in 1012ms
+
+01:58:06.309 [debug] handled notification client -> server textDocument/didChange in 307µs
+
+01:58:06.621 [debug] handled notification client -> server textDocument/didChange in 204µs
+
+01:58:06.885 [debug] handled notification client -> server textDocument/didChange in 307µs
+
+01:58:07.036 [debug] handled notification client -> server textDocument/didChange in 307µs
+
+01:58:07.272 [debug] handled notification client -> server textDocument/didChange in 512µs
+
+01:58:09.463 [debug] handled notification client -> server textDocument/didChange in 512µs
+
+01:58:09.465 [debug] handled notification client -> server textDocument/didChange in 307µs
+
+01:58:10.474 id=5 [debug] handled request client -> server textDocument/completion in 1008ms
+
+01:58:14.810 [debug] handled notification client -> server textDocument/didChange in 512µs
+
+01:58:15.452 [debug] handled notification client -> server textDocument/didChange in 410µs
+
+01:58:16.140 [debug] handled notification client -> server textDocument/didChange in 409µs
+
+01:58:16.466 id=6 [debug] handled request client -> server textDocument/completion in 1010ms
+
+01:58:21.821 [debug] handled notification client -> server textDocument/didClose in 2ms
+
+01:58:24.156 id=7 [debug] handled request client -> server shutdown in 1ms
+
+01:58:24.156 id=8 [debug] handled request client -> server shutdown in 103µs
+
+01:59:23.081 [info] Loading 47 CA(s) from :otp store
+
+01:59:23.389 id=1 [debug] handled request client -> server initialize in 103ms
+
+01:59:23.437 [debug] sent notification server -> client window/logMessage
+
+01:59:23.438 [debug] handled notification client -> server textDocument/didOpen in 5ms
+
+01:59:23.441 [debug] NextLS v0.23.4 has initialized!
+
+01:59:23.441 [debug] sent notification server -> client window/logMessage
+
+01:59:23.441 [debug] Log file located at c:/Users/ryans/Documents/Code/chaoschat/.elixir-tools/next-ls.log
+
+01:59:23.441 [debug] sent notification server -> client window/logMessage
+
+01:59:23.441 [info] [extension] Credo initializing with options %NextLS.InitOpts.Extensions.Credo{enable: true, cli_options: []}
+
+01:59:23.441 id=7 [debug] sent request server -> client client/registerCapability
+
+01:59:23.970 [debug] sent notification server -> client window/logMessage
+
+01:59:23.970 [warning] Failed to unzip and install the bundled Elixir archive.
+
+** (MatchError) no match of right hand side value: {"** (Regex.CompileError) invalid_option at position E\n    (elixir 1.17.3) lib/regex.ex:257: Regex.compile!/2\n    (elixir 1.17.3) expanding macro: Kernel.sigil_r/2\n    c:/Users/ryans/Documents/Code/chaoschat/config/config.exs:78: (file)\n", 1}
+    (next_ls 0.23.4) lib/next_ls/runtime/bundled_elixir.ex:55: NextLS.Runtime.BundledElixir.install/2
+    (next_ls 0.23.4) lib/next_ls.ex:882: NextLS.handle_notification/2
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:528: anonymous fn/2 in GenLSP.loop/3
+    (telemetry 1.3.0) /Users/runner/work/next-ls/next-ls/deps/telemetry/src/telemetry.erl:324: :telemetry.span/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:524: anonymous fn/4 in GenLSP.loop/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:601: anonymous fn/4 in GenLSP.attempt/4
+    (elixir 1.17.3) lib/task/supervised.ex:101: Task.Supervised.invoke_mfa/2
+
+
+
+01:59:23.970 [debug] sent notification server -> client window/logMessage
+
+01:59:23.970 [debug] Booting runtimes...
+
+01:59:23.976 id=71 [debug] sent request server -> client window/workDoneProgress/create
+
+01:59:23.983 [debug] sent notification server -> client $/progress
+
+01:59:23.985 [error] ** (MatchError) no match of right hand side value: {:error, {%File.Error{reason: :enoent, path: "/C:/Users/ryans/Documents/Code/chaoschat/.elixir-tools", action: "make directory (with -p)"}, [{File, :mkdir_p!, 1, [file: ~c"lib/file.ex", line: 346]}, {NextLS.Runtime.Supervisor, :init, 1, [file: ~c"lib/next_ls/runtime/supervisor.ex", line: 18]}, {:supervisor, :init, 1, [file: ~c"supervisor.erl", line: 869]}, {:gen_server, :init_it, 2, [file: ~c"gen_server.erl", line: 2229]}, {:gen_server, :init_it, 6, [file: ~c"gen_server.erl", line: 2184]}, {:proc_lib, :init_p_do_apply, 3, [file: ~c"proc_lib.erl", line: 329]}]}}
+    (next_ls 0.23.4) lib/next_ls.ex:907: anonymous fn/5 in NextLS.handle_notification/2
+    (elixir 1.17.3) lib/enum.ex:2531: Enum."-reduce/3-lists^foldl/2-0-"/3
+    (next_ls 0.23.4) lib/next_ls.ex:902: NextLS.handle_notification/2
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:528: anonymous fn/2 in GenLSP.loop/3
+    (telemetry 1.3.0) /Users/runner/work/next-ls/next-ls/deps/telemetry/src/telemetry.erl:324: :telemetry.span/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:524: anonymous fn/4 in GenLSP.loop/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:601: anonymous fn/4 in GenLSP.attempt/4
+    (elixir 1.17.3) lib/task/supervised.ex:101: Task.Supervised.invoke_mfa/2
+
+
+01:59:23.985 [debug] sent notification server -> client window/logMessage
+
+01:59:23.985 [warning] client -> server notification crashed
+
+02:06:10.972 id=2 [debug] handled request client -> server shutdown in 1ms
+
+02:06:10.973 id=3 [debug] handled request client -> server shutdown in 102µs
+
+02:06:17.191 [info] Loading 47 CA(s) from :otp store
+
+02:06:17.459 id=1 [debug] handled request client -> server initialize in 110ms
+
+02:06:17.493 [debug] sent notification server -> client window/logMessage
+
+02:06:17.494 [debug] handled notification client -> server textDocument/didOpen in 4ms
+
+02:06:17.496 [debug] NextLS v0.23.4 has initialized!
+
+02:06:17.496 [debug] sent notification server -> client window/logMessage
+
+02:06:17.496 [debug] Log file located at c:/Users/ryans/Documents/Code/chaoschat/.elixir-tools/next-ls.log
+
+02:06:17.496 id=132 [debug] sent request server -> client client/registerCapability
+
+02:06:17.496 [debug] sent notification server -> client window/logMessage
+
+02:06:17.496 [info] [extension] Credo initializing with options %NextLS.InitOpts.Extensions.Credo{enable: true, cli_options: []}
+
+02:06:18.018 [debug] sent notification server -> client window/logMessage
+
+02:06:18.018 [warning] Failed to unzip and install the bundled Elixir archive.
+
+** (MatchError) no match of right hand side value: {"** (Regex.CompileError) invalid_option at position E\n    (elixir 1.17.3) lib/regex.ex:257: Regex.compile!/2\n    (elixir 1.17.3) expanding macro: Kernel.sigil_r/2\n    c:/Users/ryans/Documents/Code/chaoschat/config/config.exs:78: (file)\n", 1}
+    (next_ls 0.23.4) lib/next_ls/runtime/bundled_elixir.ex:55: NextLS.Runtime.BundledElixir.install/2
+    (next_ls 0.23.4) lib/next_ls.ex:882: NextLS.handle_notification/2
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:528: anonymous fn/2 in GenLSP.loop/3
+    (telemetry 1.3.0) /Users/runner/work/next-ls/next-ls/deps/telemetry/src/telemetry.erl:324: :telemetry.span/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:524: anonymous fn/4 in GenLSP.loop/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:601: anonymous fn/4 in GenLSP.attempt/4
+    (elixir 1.17.3) lib/task/supervised.ex:101: Task.Supervised.invoke_mfa/2
+
+
+
+02:06:18.018 [debug] sent notification server -> client window/logMessage
+
+02:06:18.018 [debug] Booting runtimes...
+
+02:06:18.024 id=196 [debug] sent request server -> client window/workDoneProgress/create
+
+02:06:18.031 [debug] sent notification server -> client $/progress
+
+02:06:18.033 [error] ** (MatchError) no match of right hand side value: {:error, {%File.Error{reason: :enoent, path: "/C:/Users/ryans/Documents/Code/chaoschat/.elixir-tools", action: "make directory (with -p)"}, [{File, :mkdir_p!, 1, [file: ~c"lib/file.ex", line: 346]}, {NextLS.Runtime.Supervisor, :init, 1, [file: ~c"lib/next_ls/runtime/supervisor.ex", line: 18]}, {:supervisor, :init, 1, [file: ~c"supervisor.erl", line: 869]}, {:gen_server, :init_it, 2, [file: ~c"gen_server.erl", line: 2229]}, {:gen_server, :init_it, 6, [file: ~c"gen_server.erl", line: 2184]}, {:proc_lib, :init_p_do_apply, 3, [file: ~c"proc_lib.erl", line: 329]}]}}
+    (next_ls 0.23.4) lib/next_ls.ex:907: anonymous fn/5 in NextLS.handle_notification/2
+    (elixir 1.17.3) lib/enum.ex:2531: Enum."-reduce/3-lists^foldl/2-0-"/3
+    (next_ls 0.23.4) lib/next_ls.ex:902: NextLS.handle_notification/2
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:528: anonymous fn/2 in GenLSP.loop/3
+    (telemetry 1.3.0) /Users/runner/work/next-ls/next-ls/deps/telemetry/src/telemetry.erl:324: :telemetry.span/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:524: anonymous fn/4 in GenLSP.loop/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:601: anonymous fn/4 in GenLSP.attempt/4
+    (elixir 1.17.3) lib/task/supervised.ex:101: Task.Supervised.invoke_mfa/2
+
+
+02:06:18.033 [debug] sent notification server -> client window/logMessage
+
+02:06:18.033 [warning] client -> server notification crashed
+
+02:06:46.931 [debug] handled notification client -> server textDocument/didOpen in 102µs
+
+02:06:55.231 [debug] handled notification client -> server textDocument/didOpen in 205µs
+
+02:06:55.333 [debug] handled notification client -> server workspace/didChangeWatchedFiles in 3ms
+
+02:20:22.927 [debug] handled notification client -> server textDocument/didOpen in 205µs
+
+02:20:23.047 [debug] handled notification client -> server workspace/didChangeWatchedFiles in 308µs
+
+02:20:25.647 [debug] handled notification client -> server textDocument/didOpen in 102µs
+
+02:20:25.760 [debug] handled notification client -> server workspace/didChangeWatchedFiles in 205µs
+
+02:25:06.547 id=2 [debug] handled request client -> server shutdown in 2ms
+
+02:25:06.547 id=3 [debug] handled request client -> server shutdown in 205µs
+
+02:25:13.822 [info] Loading 47 CA(s) from :otp store
+
+02:25:14.273 id=1 [debug] handled request client -> server initialize in 88ms
+
+02:25:14.279 [debug] sent notification server -> client window/logMessage
+
+02:25:14.280 [debug] handled notification client -> server textDocument/didOpen in 3ms
+
+02:25:14.282 [debug] NextLS v0.23.4 has initialized!
+
+02:25:14.282 [debug] sent notification server -> client window/logMessage
+
+02:25:14.282 [debug] Log file located at c:/Users/ryans/Documents/Code/chaoschat/.elixir-tools/next-ls.log
+
+02:25:14.282 [debug] sent notification server -> client window/logMessage
+
+02:25:14.282 id=3523 [debug] sent request server -> client client/registerCapability
+
+02:25:14.282 [info] [extension] Credo initializing with options %NextLS.InitOpts.Extensions.Credo{enable: true, cli_options: []}
+
+02:25:14.878 [debug] sent notification server -> client window/logMessage
+
+02:25:14.878 [warning] Failed to unzip and install the bundled Elixir archive.
+
+** (MatchError) no match of right hand side value: {"** (Regex.CompileError) invalid_option at position E\n    (elixir 1.17.3) lib/regex.ex:257: Regex.compile!/2\n    (elixir 1.17.3) expanding macro: Kernel.sigil_r/2\n    c:/Users/ryans/Documents/Code/chaoschat/config/config.exs:78: (file)\n", 1}
+    (next_ls 0.23.4) lib/next_ls/runtime/bundled_elixir.ex:55: NextLS.Runtime.BundledElixir.install/2
+    (next_ls 0.23.4) lib/next_ls.ex:882: NextLS.handle_notification/2
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:528: anonymous fn/2 in GenLSP.loop/3
+    (telemetry 1.3.0) /Users/runner/work/next-ls/next-ls/deps/telemetry/src/telemetry.erl:324: :telemetry.span/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:524: anonymous fn/4 in GenLSP.loop/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:601: anonymous fn/4 in GenLSP.attempt/4
+    (elixir 1.17.3) lib/task/supervised.ex:101: Task.Supervised.invoke_mfa/2
+
+
+
+02:25:14.878 [debug] sent notification server -> client window/logMessage
+
+02:25:14.878 [debug] Booting runtimes...
+
+02:25:14.885 id=3587 [debug] sent request server -> client window/workDoneProgress/create
+
+02:25:14.890 [debug] sent notification server -> client $/progress
+
+02:25:14.893 [error] ** (MatchError) no match of right hand side value: {:error, {%File.Error{reason: :enoent, path: "/C:/Users/ryans/Documents/Code/chaoschat/.elixir-tools", action: "make directory (with -p)"}, [{File, :mkdir_p!, 1, [file: ~c"lib/file.ex", line: 346]}, {NextLS.Runtime.Supervisor, :init, 1, [file: ~c"lib/next_ls/runtime/supervisor.ex", line: 18]}, {:supervisor, :init, 1, [file: ~c"supervisor.erl", line: 869]}, {:gen_server, :init_it, 2, [file: ~c"gen_server.erl", line: 2229]}, {:gen_server, :init_it, 6, [file: ~c"gen_server.erl", line: 2184]}, {:proc_lib, :init_p_do_apply, 3, [file: ~c"proc_lib.erl", line: 329]}]}}
+    (next_ls 0.23.4) lib/next_ls.ex:907: anonymous fn/5 in NextLS.handle_notification/2
+    (elixir 1.17.3) lib/enum.ex:2531: Enum."-reduce/3-lists^foldl/2-0-"/3
+    (next_ls 0.23.4) lib/next_ls.ex:902: NextLS.handle_notification/2
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:528: anonymous fn/2 in GenLSP.loop/3
+    (telemetry 1.3.0) /Users/runner/work/next-ls/next-ls/deps/telemetry/src/telemetry.erl:324: :telemetry.span/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:524: anonymous fn/4 in GenLSP.loop/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:601: anonymous fn/4 in GenLSP.attempt/4
+    (elixir 1.17.3) lib/task/supervised.ex:101: Task.Supervised.invoke_mfa/2
+
+
+02:25:14.893 [debug] sent notification server -> client window/logMessage
+
+02:25:14.893 [warning] client -> server notification crashed
+
+02:25:47.104 [debug] handled notification client -> server textDocument/didOpen in 102µs
+
+02:29:23.964 id=2 [debug] handled request client -> server shutdown in 1ms
+
+02:29:23.964 id=3 [debug] handled request client -> server shutdown in 103µs
+
+02:52:06.879 [info] Loading 47 CA(s) from :otp store
+
+02:52:07.137 id=1 [debug] handled request client -> server initialize in 99ms
+
+03:00:58.940 [debug] handled notification client -> server textDocument/didOpen in 5ms
+
+03:00:58.941 [debug] sent notification server -> client window/logMessage
+
+03:00:58.943 [debug] NextLS v0.23.4 has initialized!
+
+03:00:58.943 [debug] sent notification server -> client window/logMessage
+
+03:00:58.943 [debug] Log file located at c:/Users/ryans/Documents/Code/chaoschat/.elixir-tools/next-ls.log
+
+03:00:58.943 [debug] sent notification server -> client window/logMessage
+
+03:00:58.943 [info] [extension] Credo initializing with options %NextLS.InitOpts.Extensions.Credo{enable: true, cli_options: []}
+
+03:00:58.943 id=3656 [debug] sent request server -> client client/registerCapability
+
+03:01:00.922 [debug] sent notification server -> client window/logMessage
+
+03:01:00.922 [warning] Failed to unzip and install the bundled Elixir archive.
+
+** (MatchError) no match of right hand side value: {"** (Regex.CompileError) invalid_option at position E\n    (elixir 1.17.3) lib/regex.ex:257: Regex.compile!/2\n    (elixir 1.17.3) expanding macro: Kernel.sigil_r/2\n    c:/Users/ryans/Documents/Code/chaoschat/config/config.exs:78: (file)\n", 1}
+    (next_ls 0.23.4) lib/next_ls/runtime/bundled_elixir.ex:55: NextLS.Runtime.BundledElixir.install/2
+    (next_ls 0.23.4) lib/next_ls.ex:882: NextLS.handle_notification/2
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:528: anonymous fn/2 in GenLSP.loop/3
+    (telemetry 1.3.0) /Users/runner/work/next-ls/next-ls/deps/telemetry/src/telemetry.erl:324: :telemetry.span/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:524: anonymous fn/4 in GenLSP.loop/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:601: anonymous fn/4 in GenLSP.attempt/4
+    (elixir 1.17.3) lib/task/supervised.ex:101: Task.Supervised.invoke_mfa/2
+
+
+
+03:01:00.922 [debug] sent notification server -> client window/logMessage
+
+03:01:00.922 [debug] Booting runtimes...
+
+03:01:00.929 id=2 [debug] sent request server -> client window/workDoneProgress/create
+
+03:01:00.939 [error] ** (MatchError) no match of right hand side value: {:error, {%File.Error{reason: :enoent, path: "/C:/Users/ryans/Documents/Code/chaoschat/.elixir-tools", action: "make directory (with -p)"}, [{File, :mkdir_p!, 1, [file: ~c"lib/file.ex", line: 346]}, {NextLS.Runtime.Supervisor, :init, 1, [file: ~c"lib/next_ls/runtime/supervisor.ex", line: 18]}, {:supervisor, :init, 1, [file: ~c"supervisor.erl", line: 869]}, {:gen_server, :init_it, 2, [file: ~c"gen_server.erl", line: 2229]}, {:gen_server, :init_it, 6, [file: ~c"gen_server.erl", line: 2184]}, {:proc_lib, :init_p_do_apply, 3, [file: ~c"proc_lib.erl", line: 329]}]}}
+    (next_ls 0.23.4) lib/next_ls.ex:907: anonymous fn/5 in NextLS.handle_notification/2
+    (elixir 1.17.3) lib/enum.ex:2531: Enum."-reduce/3-lists^foldl/2-0-"/3
+    (next_ls 0.23.4) lib/next_ls.ex:902: NextLS.handle_notification/2
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:528: anonymous fn/2 in GenLSP.loop/3
+    (telemetry 1.3.0) /Users/runner/work/next-ls/next-ls/deps/telemetry/src/telemetry.erl:324: :telemetry.span/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:524: anonymous fn/4 in GenLSP.loop/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:601: anonymous fn/4 in GenLSP.attempt/4
+    (elixir 1.17.3) lib/task/supervised.ex:101: Task.Supervised.invoke_mfa/2
+
+
+03:01:00.939 [debug] sent notification server -> client window/logMessage
+
+03:01:00.939 [warning] client -> server notification crashed
+
+03:01:01.151 [debug] sent notification server -> client $/progress
+
+03:01:01.156 [debug] handled notification client -> server workspace/didChangeWatchedFiles in 5ms
+
+03:01:03.596 [debug] handled notification client -> server textDocument/didOpen in 307µs
+
+03:07:59.525 id=2 [debug] handled request client -> server shutdown in 1ms
+
+03:07:59.525 id=3 [debug] handled request client -> server shutdown in 0µs
+
+03:10:13.143 [info] Loading 47 CA(s) from :otp store
+
+03:10:13.410 id=1 [debug] handled request client -> server initialize in 99ms
+
+03:10:13.469 [debug] sent notification server -> client window/logMessage
+
+03:10:13.469 [debug] handled notification client -> server textDocument/didOpen in 6ms
+
+03:10:13.473 [debug] NextLS v0.23.4 has initialized!
+
+03:10:13.473 [debug] sent notification server -> client window/logMessage
+
+03:10:13.473 [debug] Log file located at c:/Users/ryans/Documents/Code/chaoschat/.elixir-tools/next-ls.log
+
+03:10:13.473 [debug] sent notification server -> client window/logMessage
+
+03:10:13.473 [info] [extension] Credo initializing with options %NextLS.InitOpts.Extensions.Credo{enable: true, cli_options: []}
+
+03:10:13.473 id=69 [debug] sent request server -> client client/registerCapability
+
+03:10:13.969 [debug] sent notification server -> client window/logMessage
+
+03:10:13.969 [warning] Failed to unzip and install the bundled Elixir archive.
+
+** (MatchError) no match of right hand side value: {"** (Regex.CompileError) invalid_option at position E\n    (elixir 1.17.3) lib/regex.ex:257: Regex.compile!/2\n    (elixir 1.17.3) expanding macro: Kernel.sigil_r/2\n    c:/Users/ryans/Documents/Code/chaoschat/config/config.exs:78: (file)\n", 1}
+    (next_ls 0.23.4) lib/next_ls/runtime/bundled_elixir.ex:55: NextLS.Runtime.BundledElixir.install/2
+    (next_ls 0.23.4) lib/next_ls.ex:882: NextLS.handle_notification/2
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:528: anonymous fn/2 in GenLSP.loop/3
+    (telemetry 1.3.0) /Users/runner/work/next-ls/next-ls/deps/telemetry/src/telemetry.erl:324: :telemetry.span/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:524: anonymous fn/4 in GenLSP.loop/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:601: anonymous fn/4 in GenLSP.attempt/4
+    (elixir 1.17.3) lib/task/supervised.ex:101: Task.Supervised.invoke_mfa/2
+
+
+
+03:10:13.969 [debug] sent notification server -> client window/logMessage
+
+03:10:13.969 [debug] Booting runtimes...
+
+03:10:13.975 id=3527 [debug] sent request server -> client window/workDoneProgress/create
+
+03:10:13.981 [debug] sent notification server -> client $/progress
+
+03:10:13.983 [error] ** (MatchError) no match of right hand side value: {:error, {%File.Error{reason: :enoent, path: "/C:/Users/ryans/Documents/Code/chaoschat/.elixir-tools", action: "make directory (with -p)"}, [{File, :mkdir_p!, 1, [file: ~c"lib/file.ex", line: 346]}, {NextLS.Runtime.Supervisor, :init, 1, [file: ~c"lib/next_ls/runtime/supervisor.ex", line: 18]}, {:supervisor, :init, 1, [file: ~c"supervisor.erl", line: 869]}, {:gen_server, :init_it, 2, [file: ~c"gen_server.erl", line: 2229]}, {:gen_server, :init_it, 6, [file: ~c"gen_server.erl", line: 2184]}, {:proc_lib, :init_p_do_apply, 3, [file: ~c"proc_lib.erl", line: 329]}]}}
+    (next_ls 0.23.4) lib/next_ls.ex:907: anonymous fn/5 in NextLS.handle_notification/2
+    (elixir 1.17.3) lib/enum.ex:2531: Enum."-reduce/3-lists^foldl/2-0-"/3
+    (next_ls 0.23.4) lib/next_ls.ex:902: NextLS.handle_notification/2
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:528: anonymous fn/2 in GenLSP.loop/3
+    (telemetry 1.3.0) /Users/runner/work/next-ls/next-ls/deps/telemetry/src/telemetry.erl:324: :telemetry.span/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:524: anonymous fn/4 in GenLSP.loop/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:601: anonymous fn/4 in GenLSP.attempt/4
+    (elixir 1.17.3) lib/task/supervised.ex:101: Task.Supervised.invoke_mfa/2
+
+
+03:10:13.983 [debug] sent notification server -> client window/logMessage
+
+03:10:13.983 [warning] client -> server notification crashed
+
+03:14:36.213 id=2 [debug] handled request client -> server shutdown in 1ms
+
+03:14:36.213 id=3 [debug] handled request client -> server shutdown in 102µs
+
+03:29:03.493 [info] Loading 47 CA(s) from :otp store
+
+03:29:04.045 id=1 [debug] handled request client -> server initialize in 112ms
+
+03:29:04.052 [debug] sent notification server -> client window/logMessage
+
+03:29:04.053 [debug] handled notification client -> server textDocument/didOpen in 4ms
+
+03:29:04.055 id=139 [debug] sent request server -> client client/registerCapability
+
+03:29:04.055 [debug] NextLS v0.23.4 has initialized!
+
+03:29:04.055 [debug] sent notification server -> client window/logMessage
+
+03:29:04.055 [debug] Log file located at c:/Users/ryans/Documents/Code/chaoschat/.elixir-tools/next-ls.log
+
+03:29:04.055 [debug] sent notification server -> client window/logMessage
+
+03:29:04.055 [info] [extension] Credo initializing with options %NextLS.InitOpts.Extensions.Credo{enable: true, cli_options: []}
+
+03:29:04.664 [debug] sent notification server -> client window/logMessage
+
+03:29:04.664 [warning] Failed to unzip and install the bundled Elixir archive.
+
+** (MatchError) no match of right hand side value: {"** (Regex.CompileError) invalid_option at position E\n    (elixir 1.17.3) lib/regex.ex:257: Regex.compile!/2\n    (elixir 1.17.3) expanding macro: Kernel.sigil_r/2\n    c:/Users/ryans/Documents/Code/chaoschat/config/config.exs:78: (file)\n", 1}
+    (next_ls 0.23.4) lib/next_ls/runtime/bundled_elixir.ex:55: NextLS.Runtime.BundledElixir.install/2
+    (next_ls 0.23.4) lib/next_ls.ex:882: NextLS.handle_notification/2
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:528: anonymous fn/2 in GenLSP.loop/3
+    (telemetry 1.3.0) /Users/runner/work/next-ls/next-ls/deps/telemetry/src/telemetry.erl:324: :telemetry.span/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:524: anonymous fn/4 in GenLSP.loop/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:601: anonymous fn/4 in GenLSP.attempt/4
+    (elixir 1.17.3) lib/task/supervised.ex:101: Task.Supervised.invoke_mfa/2
+
+
+
+03:29:04.664 [debug] sent notification server -> client window/logMessage
+
+03:29:04.664 [debug] Booting runtimes...
+
+03:29:04.670 id=3 [debug] sent request server -> client window/workDoneProgress/create
+
+03:29:04.677 [debug] sent notification server -> client $/progress
+
+03:29:04.681 [error] ** (MatchError) no match of right hand side value: {:error, {%File.Error{reason: :enoent, path: "/C:/Users/ryans/Documents/Code/chaoschat/.elixir-tools", action: "make directory (with -p)"}, [{File, :mkdir_p!, 1, [file: ~c"lib/file.ex", line: 346]}, {NextLS.Runtime.Supervisor, :init, 1, [file: ~c"lib/next_ls/runtime/supervisor.ex", line: 18]}, {:supervisor, :init, 1, [file: ~c"supervisor.erl", line: 869]}, {:gen_server, :init_it, 2, [file: ~c"gen_server.erl", line: 2229]}, {:gen_server, :init_it, 6, [file: ~c"gen_server.erl", line: 2184]}, {:proc_lib, :init_p_do_apply, 3, [file: ~c"proc_lib.erl", line: 329]}]}}
+    (next_ls 0.23.4) lib/next_ls.ex:907: anonymous fn/5 in NextLS.handle_notification/2
+    (elixir 1.17.3) lib/enum.ex:2531: Enum."-reduce/3-lists^foldl/2-0-"/3
+    (next_ls 0.23.4) lib/next_ls.ex:902: NextLS.handle_notification/2
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:528: anonymous fn/2 in GenLSP.loop/3
+    (telemetry 1.3.0) /Users/runner/work/next-ls/next-ls/deps/telemetry/src/telemetry.erl:324: :telemetry.span/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:524: anonymous fn/4 in GenLSP.loop/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:601: anonymous fn/4 in GenLSP.attempt/4
+    (elixir 1.17.3) lib/task/supervised.ex:101: Task.Supervised.invoke_mfa/2
+
+
+03:29:04.681 [debug] sent notification server -> client window/logMessage
+
+03:29:04.681 [warning] client -> server notification crashed
+
+03:48:57.319 id=2 [debug] handled request client -> server shutdown in 1ms
+
+03:48:57.319 id=3 [debug] handled request client -> server shutdown in 103µs
