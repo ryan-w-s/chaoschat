@@ -6,7 +6,7 @@ defmodule Chaoschat.Accounts do
   import Ecto.Query, warn: false
   alias Chaoschat.Repo
 
-  alias Chaoschat.Accounts.{User, UserToken, UserNotifier}
+  alias Chaoschat.Accounts.{User, UserNotifier, UserToken}
 
   ## Database getters
 

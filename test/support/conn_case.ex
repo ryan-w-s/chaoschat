@@ -17,6 +17,8 @@ defmodule ChaoschatWeb.ConnCase do
 
   use ExUnit.CaseTemplate
 
+  alias Chaoschat.Accounts.Scope
+
   using do
     quote do
       # The default endpoint for testing
@@ -28,6 +30,8 @@ defmodule ChaoschatWeb.ConnCase do
       import Plug.Conn
       import Phoenix.ConnTest
       import ChaoschatWeb.ConnCase
+
+      alias Chaoschat.Accounts.Scope
     end
   end
 
@@ -46,7 +50,7 @@ defmodule ChaoschatWeb.ConnCase do
   """
   def register_and_log_in_user(%{conn: conn} = context) do
     user = Chaoschat.AccountsFixtures.user_fixture()
-    scope = Chaoschat.Accounts.Scope.for_user(user)
+    scope = Scope.for_user(user)
 
     opts =
       context

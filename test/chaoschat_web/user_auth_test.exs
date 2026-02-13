@@ -1,10 +1,10 @@
 defmodule ChaoschatWeb.UserAuthTest do
   use ChaoschatWeb.ConnCase
 
-  alias Phoenix.LiveView
   alias Chaoschat.Accounts
   alias Chaoschat.Accounts.Scope
   alias ChaoschatWeb.UserAuth
+  alias Phoenix.LiveView
 
   import Chaoschat.AccountsFixtures
 

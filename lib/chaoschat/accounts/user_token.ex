@@ -1,4 +1,7 @@
 defmodule Chaoschat.Accounts.UserToken do
+  @moduledoc """
+  User token handling.
+  """
   use Ecto.Schema
   import Ecto.Query
   alias Chaoschat.Accounts.UserToken

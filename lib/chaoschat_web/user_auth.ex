@@ -1,4 +1,7 @@
 defmodule ChaoschatWeb.UserAuth do
+  @moduledoc """
+  User authentication logic.
+  """
   use ChaoschatWeb, :verified_routes
 
   import Plug.Conn

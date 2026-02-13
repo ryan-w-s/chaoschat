@@ -88,8 +88,8 @@ defmodule ChaoschatWeb do
       import ChaoschatWeb.CoreComponents
 
       # Common modules used in templates
-      alias Phoenix.LiveView.JS
       alias ChaoschatWeb.Layouts
+      alias Phoenix.LiveView.JS
 
       # Routes generation with the ~p sigil
       unquote(verified_routes())

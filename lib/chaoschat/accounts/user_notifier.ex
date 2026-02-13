@@ -1,8 +1,11 @@
 defmodule Chaoschat.Accounts.UserNotifier do
+  @moduledoc """
+  User email notifications.
+  """
   import Swoosh.Email
 
-  alias Chaoschat.Mailer
   alias Chaoschat.Accounts.User
+  alias Chaoschat.Mailer
 
   # Delivers the email using the application mailer.
   defp deliver(recipient, subject, body) do
