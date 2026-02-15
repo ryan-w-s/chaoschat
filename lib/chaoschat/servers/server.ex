@@ -16,6 +16,7 @@ defmodule Chaoschat.Servers.Server do
     belongs_to :user, User
     has_many :server_members, ServerMember
     has_many :members, through: [:server_members, :user]
+    has_many :channels, Chaoschat.Servers.Channel
 
     timestamps(type: :utc_datetime)
   end

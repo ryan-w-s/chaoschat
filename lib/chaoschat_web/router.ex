@@ -59,6 +59,11 @@ defmodule ChaoschatWeb.Router do
       live "/servers/new", ServerLive.Form, :new
       live "/servers/:id", ServerLive.Show, :show
       live "/servers/:id/edit", ServerLive.Form, :edit
+
+      live "/servers/:server_id/channels", ChannelLive.Index, :index
+      live "/servers/:server_id/channels/new", ChannelLive.Form, :new
+      live "/servers/:server_id/channels/:id", ChannelLive.Show, :show
+      live "/servers/:server_id/channels/:id/edit", ChannelLive.Form, :edit
     end
 
     post "/users/update-password", UserSessionController, :update_password

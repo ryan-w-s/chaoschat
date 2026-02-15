@@ -80,6 +80,24 @@ for data <- users_data do
     _existing ->
       :ok
   end
+
+  # Add generic channels
+  for channel_name <- ["General", "Off-Topic"] do
+    case Repo.get_by(Chaoschat.Servers.Channel, server_id: server.id, name: channel_name) do
+      nil ->
+        Repo.insert!(%Chaoschat.Servers.Channel{
+          server_id: server.id,
+          user_id: user.id,
+          name: channel_name,
+          description: "Channel for #{channel_name}",
+          inserted_at: now,
+          updated_at: now
+        })
+
+      _ ->
+        :ok
+    end
+  end
 end
 
 IO.puts("\n✅ Seeded 5 users (password: #{password})")

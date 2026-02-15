@@ -175,4 +175,103 @@ defmodule Chaoschat.ServersTest do
       assert hd(joined).id == server.id
     end
   end
+
+  describe "channels" do
+    alias Chaoschat.Servers.Channel
+
+    import Chaoschat.AccountsFixtures, only: [user_scope_fixture: 0]
+    import Chaoschat.ServersFixtures
+
+    @invalid_attrs %{name: nil, description: nil}
+
+    test "list_channels/1 returns all scoped channels" do
+      scope = user_scope_fixture()
+      other_scope = user_scope_fixture()
+      channel = channel_fixture(scope)
+      other_channel = channel_fixture(other_scope)
+      assert Servers.list_channels(scope, channel.server_id) == [channel]
+      assert Servers.list_channels(other_scope, other_channel.server_id) == [other_channel]
+    end
+
+    test "get_channel!/2 returns the channel with given id" do
+      scope = user_scope_fixture()
+      channel = channel_fixture(scope)
+      other_scope = user_scope_fixture()
+      assert Servers.get_channel!(scope, channel.id) == channel
+      assert_raise Ecto.NoResultsError, fn -> Servers.get_channel!(other_scope, channel.id) end
+    end
+
+    test "create_channel/2 with valid data creates a channel" do
+      scope = user_scope_fixture()
+      server = server_fixture(scope)
+      valid_attrs = %{name: "some name", description: "some description", server_id: server.id}
+
+      assert {:ok, %Channel{} = channel} = Servers.create_channel(scope, valid_attrs)
+      assert channel.name == "some name"
+      assert channel.description == "some description"
+      assert channel.user_id == scope.user.id
+    end
+
+    test "create_channel/2 with invalid data returns error changeset" do
+      scope = user_scope_fixture()
+      server = server_fixture(scope)
+
+      # Invalid attrs missing required fields, but we should provide server_id if we want to test other validations,
+      # or just test that it fails. @invalid_attrs has nils.
+      # If create_channel requires server_id, and we don't provide it, it fails.
+      # But @invalid_attrs = %{name: nil, description: nil}.
+      # Creating with invalid attrs (even if server_id was present) should fail.
+      # Let's add server_id to be safe? Or just assert error.
+      # The test expects error changeset.
+      assert {:error, %Ecto.Changeset{}} =
+               Servers.create_channel(scope, Map.put(@invalid_attrs, :server_id, server.id))
+    end
+
+    test "update_channel/3 with valid data updates the channel" do
+      scope = user_scope_fixture()
+      channel = channel_fixture(scope)
+      update_attrs = %{name: "some updated name", description: "some updated description"}
+
+      assert {:ok, %Channel{} = channel} = Servers.update_channel(scope, channel, update_attrs)
+      assert channel.name == "some updated name"
+      assert channel.description == "some updated description"
+    end
+
+    test "update_channel/3 with invalid scope raises" do
+      scope = user_scope_fixture()
+      other_scope = user_scope_fixture()
+      channel = channel_fixture(scope)
+
+      assert_raise MatchError, fn ->
+        Servers.update_channel(other_scope, channel, %{})
+      end
+    end
+
+    test "update_channel/3 with invalid data returns error changeset" do
+      scope = user_scope_fixture()
+      channel = channel_fixture(scope)
+      assert {:error, %Ecto.Changeset{}} = Servers.update_channel(scope, channel, @invalid_attrs)
+      assert channel == Servers.get_channel!(scope, channel.id)
+    end
+
+    test "delete_channel/2 deletes the channel" do
+      scope = user_scope_fixture()
+      channel = channel_fixture(scope)
+      assert {:ok, %Channel{}} = Servers.delete_channel(scope, channel)
+      assert_raise Ecto.NoResultsError, fn -> Servers.get_channel!(scope, channel.id) end
+    end
+
+    test "delete_channel/2 with invalid scope raises" do
+      scope = user_scope_fixture()
+      other_scope = user_scope_fixture()
+      channel = channel_fixture(scope)
+      assert_raise MatchError, fn -> Servers.delete_channel(other_scope, channel) end
+    end
+
+    test "change_channel/2 returns a channel changeset" do
+      scope = user_scope_fixture()
+      channel = channel_fixture(scope)
+      assert %Ecto.Changeset{} = Servers.change_channel(scope, channel)
+    end
+  end
 end

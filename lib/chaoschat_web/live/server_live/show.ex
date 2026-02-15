@@ -51,6 +51,58 @@ defmodule ChaoschatWeb.ServerLive.Show do
           <div class="rounded-xl border border-zinc-200 bg-white p-6 dark:border-zinc-700 dark:bg-zinc-800">
             <div class="flex items-center justify-between">
               <h2 class="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+                Channels
+              </h2>
+              <.button
+                :if={@is_owner}
+                navigate={~p"/servers/#{@server}/channels/new"}
+                class="text-xs bg-indigo-600 text-white hover:bg-indigo-700"
+              >
+                New Channel
+              </.button>
+            </div>
+            <ul
+              id="channels"
+              phx-update="stream"
+              class="mt-4 divide-y divide-zinc-100 dark:divide-zinc-700"
+            >
+              <li
+                :for={{id, channel} <- @streams.channels}
+                id={id}
+                class="flex items-center justify-between gap-3 py-2.5"
+              >
+                <div>
+                  <p class="font-medium text-zinc-900 dark:text-zinc-100">
+                    <.link
+                      navigate={~p"/servers/#{@server}/channels/#{channel}"}
+                      class="hover:underline"
+                    >
+                      #{channel.name}
+                    </.link>
+                  </p>
+                  <p class="text-xs text-zinc-500">{channel.description}</p>
+                </div>
+                <div :if={@is_owner} class="flex items-center gap-2">
+                  <.link
+                    navigate={~p"/servers/#{@server}/channels/#{channel}/edit"}
+                    class="text-xs text-zinc-500 hover:text-zinc-700"
+                  >
+                    Edit
+                  </.link>
+                </div>
+              </li>
+            </ul>
+            <div
+              :if={@channels_count == 0}
+              class="mt-4 text-sm text-zinc-500 italic"
+            >
+              No channels yet.
+            </div>
+          </div>
+
+          <div class="rounded-xl border border-zinc-200 bg-white p-6 dark:border-zinc-700 dark:bg-zinc-800">
+            <div class="flex items-center justify-between">
+              <h2 class="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
                 Members ({length(@server.server_members)})
               </h2>
               <%= if @is_member do %>
@@ -109,9 +161,16 @@ defmodule ChaoschatWeb.ServerLive.Show do
 
     if connected?(socket) do
       Servers.subscribe_servers(socket.assigns.current_scope)
+      Servers.subscribe_channels(socket.assigns.current_scope)
     end
 
-    {:ok, assign_server(socket, server)}
+    channels = Servers.list_channels(socket.assigns.current_scope, server.id)
+
+    {:ok,
+     socket
+     |> assign_server(server)
+     |> assign(:channels_count, length(channels))
+     |> stream(:channels, channels)}
   end
 
   @impl true
@@ -171,6 +230,19 @@ defmodule ChaoschatWeb.ServerLive.Show do
      socket
      |> put_flash(:error, "This server was deleted.")
      |> push_navigate(to: ~p"/servers")}
+  end
+
+  def handle_info({type, %Chaoschat.Servers.Channel{} = channel}, socket)
+      when type in [:created, :updated, :deleted] do
+    # Only update if channel belongs to this server
+    if channel.server_id == socket.assigns.server.id do
+      case type do
+        :deleted -> {:noreply, stream_delete(socket, :channels, channel)}
+        _ -> {:noreply, stream_insert(socket, :channels, channel)}
+      end
+    else
+      {:noreply, socket}
+    end
   end
 
   def handle_info({type, %Chaoschat.Servers.Server{}}, socket)

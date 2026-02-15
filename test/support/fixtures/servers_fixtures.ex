@@ -27,4 +27,26 @@ defmodule Chaoschat.ServersFixtures do
     {:ok, member} = Servers.join_server(server, scope)
     member
   end
+
+  @doc """
+  Generate a channel.
+  """
+  def channel_fixture(scope, attrs \\ %{}) do
+    server_id =
+      attrs[:server_id] ||
+        (
+          server = server_fixture(scope)
+          server.id
+        )
+
+    attrs =
+      Enum.into(attrs, %{
+        description: "some description",
+        name: "some name",
+        server_id: server_id
+      })
+
+    {:ok, channel} = Chaoschat.Servers.create_channel(scope, attrs)
+    channel
+  end
 end
