@@ -105,7 +105,7 @@ defmodule Chaoschat.Servers do
 
   """
   def create_server(%Scope{} = scope, attrs) do
-    Repo.transact(fn ->
+    Repo.transaction(fn ->
       with {:ok, %Server{} = server} <-
              %Server{}
              |> Server.changeset(attrs, scope)
@@ -114,7 +114,9 @@ defmodule Chaoschat.Servers do
              %ServerMember{server_id: server.id, user_id: scope.user.id, role: "owner"}
              |> Repo.insert() do
         broadcast_server(scope, {:created, server})
-        {:ok, server}
+        server
+      else
+        {:error, reason} -> Repo.rollback(reason)
       end
     end)
   end
