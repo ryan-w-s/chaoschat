@@ -101,7 +101,7 @@ defmodule ChaoschatWeb.ChannelLiveTest do
 
       assert {:ok, form_live, _} =
                show_live
-               |> element("a", "Edit")
+               |> element("a[title='Edit Channel']")
                |> render_click()
                |> follow_redirect(
                  conn,

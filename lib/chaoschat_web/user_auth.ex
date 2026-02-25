@@ -214,6 +214,15 @@ defmodule ChaoschatWeb.UserAuth do
         live "/profile", ProfileLive, :index
       end
   """
+  def on_mount(:assign_joined_servers, _params, _session, socket) do
+    if scope = socket.assigns[:current_scope] do
+      servers = Chaoschat.Servers.list_joined_servers(scope)
+      {:cont, Phoenix.Component.assign(socket, :joined_servers, servers)}
+    else
+      {:cont, Phoenix.Component.assign(socket, :joined_servers, [])}
+    end
+  end
+
   def on_mount(:mount_current_scope, _params, session, socket) do
     {:cont, mount_current_scope(socket, session)}
   end
