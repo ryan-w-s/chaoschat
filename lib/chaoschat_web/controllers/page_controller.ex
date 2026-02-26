@@ -2,6 +2,10 @@ defmodule ChaoschatWeb.PageController do
   use ChaoschatWeb, :controller
 
   def home(conn, _params) do
-    render(conn, :home)
+    if conn.assigns[:current_scope] && conn.assigns.current_scope.user do
+      redirect(conn, to: ~p"/servers")
+    else
+      redirect(conn, to: ~p"/users/log-in")
+    end
   end
 end
