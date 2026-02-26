@@ -7,20 +7,45 @@ defmodule ChaoschatWeb.ChannelLive.Form do
   @impl true
   def render(assigns) do
     ~H"""
-    <Layouts.app flash={@flash} current_scope={@current_scope}>
-      <.header>
-        {@page_title}
-        <:subtitle>Use this form to manage channel records in your database.</:subtitle>
-      </.header>
+    <Layouts.app flash={@flash} current_scope={@current_scope} joined_servers={@joined_servers}>
+      <div class="flex items-center justify-center h-full w-full p-4 sm:p-6 lg:p-8 bg-zinc-50 dark:bg-[#313338]">
+        <div class="w-full max-w-md bg-white dark:bg-[#2B2D31] rounded-2xl shadow-xl overflow-hidden border border-zinc-200 dark:border-zinc-700/50">
+          <div class="px-6 py-8">
+            <h1 class="text-2xl font-bold text-center text-zinc-900 dark:text-white mb-2">
+              {@page_title}
+            </h1>
+            <p class="text-sm text-center text-zinc-500 dark:text-zinc-400 mb-8">
+              Manage your channel.
+            </p>
 
-      <.form for={@form} id="channel-form" phx-change="validate" phx-submit="save">
-        <.input field={@form[:name]} type="text" label="Name" />
-        <.input field={@form[:description]} type="text" label="Description" />
-        <footer>
-          <.button phx-disable-with="Saving..." variant="primary">Save Channel</.button>
-          <.button navigate={return_path(@current_scope, @return_to, @channel)}>Cancel</.button>
-        </footer>
-      </.form>
+            <.form
+              for={@form}
+              id="channel-form"
+              phx-change="validate"
+              phx-submit="save"
+              class="space-y-4"
+            >
+              <.input field={@form[:name]} type="text" label="Channel Name" required />
+              <.input field={@form[:description]} type="text" label="Description" />
+
+              <div class="pt-6 flex items-center justify-between gap-3 mt-8">
+                <.link
+                  navigate={return_path(@current_scope, @return_to, @channel)}
+                  class="text-sm font-semibold text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:underline transition-all"
+                >
+                  Cancel
+                </.link>
+                <.button
+                  phx-disable-with="Saving..."
+                  class="!py-2 !px-6 bg-indigo-600 hover:bg-indigo-500 text-white font-medium rounded-md transition-colors border-none shadow-md"
+                >
+                  Save Channel
+                </.button>
+              </div>
+            </.form>
+          </div>
+        </div>
+      </div>
     </Layouts.app>
     """
   end
@@ -109,7 +134,7 @@ defmodule ChaoschatWeb.ChannelLive.Form do
     end
   end
 
-  defp return_path(_scope, "index", channel), do: ~p"/servers/#{channel.server_id}/channels"
+  defp return_path(_scope, "index", channel), do: ~p"/servers/#{channel.server_id}"
 
   defp return_path(_scope, "show", channel),
     do: ~p"/servers/#{channel.server_id}/channels/#{channel}"

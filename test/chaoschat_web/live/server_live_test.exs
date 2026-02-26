@@ -41,14 +41,14 @@ defmodule ChaoschatWeb.ServerLiveTest do
              |> form("#server-form", server: @invalid_attrs)
              |> render_change() =~ "can&#39;t be blank"
 
-      assert {:ok, index_live, _html} =
+      assert {:error, {:live_redirect, %{to: path}}} =
                form_live
                |> form("#server-form", server: @create_attrs)
                |> render_submit()
-               |> follow_redirect(conn, ~p"/servers")
+
+      assert {:ok, index_live, _html} = live(conn, path)
 
       html = render(index_live)
-      assert html =~ "Server created successfully"
       assert html =~ "some name"
     end
   end

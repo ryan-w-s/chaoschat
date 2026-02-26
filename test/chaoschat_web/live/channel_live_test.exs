@@ -45,7 +45,7 @@ defmodule ChaoschatWeb.ChannelLiveTest do
                form_live
                |> form("#channel-form", channel: @create_attrs)
                |> render_submit()
-               |> follow_redirect(conn, ~p"/servers/#{server}/channels")
+               |> follow_redirect(conn, ~p"/servers/#{server}")
 
       html = render(index_live)
       assert html =~ "Channel created successfully"
@@ -71,7 +71,7 @@ defmodule ChaoschatWeb.ChannelLiveTest do
                form_live
                |> form("#channel-form", channel: @update_attrs)
                |> render_submit()
-               |> follow_redirect(conn, ~p"/servers/#{server}/channels")
+               |> follow_redirect(conn, ~p"/servers/#{server}")
 
       html = render(index_live)
       assert html =~ "Channel updated successfully"
