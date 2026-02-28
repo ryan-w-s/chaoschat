@@ -48,7 +48,7 @@ defmodule ChaoschatWeb.UserSessionController do
 
   def update_password(conn, %{"user" => user_params} = params) do
     user = conn.assigns.current_scope.user
-    true = Accounts.sudo_mode?(user)
+    true = Accounts.sudo_mode?(user, -10)
     {:ok, {_user, expired_tokens}} = Accounts.update_user_password(user, user_params)
 
     # disconnect all existing LiveViews with old sessions

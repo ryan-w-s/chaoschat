@@ -24,16 +24,16 @@ defmodule ChaoschatWeb.UserLive.SettingsTest do
       assert %{"error" => "You must log in to access this page."} = flash
     end
 
-    test "redirects if user is not in sudo mode", %{conn: conn} do
-      {:ok, conn} =
+    test "renders settings page when user is not in sudo mode", %{conn: conn} do
+      {:ok, _lv, html} =
         conn
         |> log_in_user(user_fixture(),
           token_authenticated_at: DateTime.add(DateTime.utc_now(:second), -11, :minute)
         )
         |> live(~p"/users/settings")
-        |> follow_redirect(conn, ~p"/users/log-in")
 
-      assert conn.resp_body =~ "You must re-authenticate to access this page."
+      assert html =~ "Change Email"
+      assert html =~ "Save Password"
     end
   end
 
@@ -86,6 +86,23 @@ defmodule ChaoschatWeb.UserLive.SettingsTest do
 
       assert result =~ "Change Email"
       assert result =~ "did not change"
+    end
+
+    test "redirects to login when updating email outside sudo mode", %{conn: conn} do
+      user = user_fixture()
+
+      stale_conn =
+        log_in_user(conn, user,
+          token_authenticated_at: DateTime.add(DateTime.utc_now(:second), -11, :minute)
+        )
+
+      {:ok, lv, _html} = live(stale_conn, ~p"/users/settings")
+
+      lv
+      |> form("#email_form", %{"user" => %{"email" => unique_user_email()}})
+      |> render_submit()
+
+      assert_redirect(lv, ~p"/users/log-in")
     end
   end
 
@@ -157,6 +174,30 @@ defmodule ChaoschatWeb.UserLive.SettingsTest do
       assert result =~ "Save Password"
       assert result =~ "should be at least 12 character(s)"
       assert result =~ "does not match password"
+    end
+
+    test "redirects to login when updating password outside sudo mode", %{conn: conn} do
+      user = user_fixture()
+      new_password = valid_user_password()
+
+      stale_conn =
+        log_in_user(conn, user,
+          token_authenticated_at: DateTime.add(DateTime.utc_now(:second), -11, :minute)
+        )
+
+      {:ok, lv, _html} = live(stale_conn, ~p"/users/settings")
+
+      lv
+      |> form("#password_form", %{
+        "user" => %{
+          "email" => user.email,
+          "password" => new_password,
+          "password_confirmation" => new_password
+        }
+      })
+      |> render_submit()
+
+      assert_redirect(lv, ~p"/users/log-in")
     end
   end
 
